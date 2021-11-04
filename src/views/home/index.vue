@@ -2,12 +2,12 @@
   <div>
     <el-row :gutter="40" class="panel-group">
       <el-col
+        v-for="(list, i) in lists"
+        :key="i"
         :xs="24"
         :sm="12"
         :lg="6"
         class="card-panel-col"
-        v-for="(list, i) in lists"
-        :key="i"
       >
         <div class="card-panel" :style="{ background: list.color }">
           <div class="card-panel-description">
@@ -22,10 +22,10 @@
             />
           </div>
         </div>
-
       </el-col>
-          <el-button @click="btnHandel" >Btn</el-button>
-
+      <el-button @click="btnHandel">
+        Btn
+      </el-button>
     </el-row>
   </div>
 </template>
@@ -71,18 +71,18 @@ export default {
     };
   },
   methods: {
-    btnHandel(){
-      console.log("a")
-      let urlObject = window.URL;
+    btnHandel() {
+      console.log("a");
+      const urlObject = window.URL;
       console.log(urlObject);
-      let t = new Blob([]);
+      const t = new Blob([]);
       console.log(t);
-      let saveLink = document.createElement("a");
+      const saveLink = document.createElement("a");
       console.log(saveLink);
-      saveLink.download = 'aaaaa'
+      saveLink.download = "aaaaa";
       saveLink.click();
-    }
-  }
+    },
+  },
 };
 </script>
 

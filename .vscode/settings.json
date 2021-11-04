@@ -1,0 +1,24 @@
+{
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate":[
+    "javascript",
+    "javascriptreact",
+    "typescipt",
+    "typescriptreact",
+  ],
+  "eslint.format.enable": true,
+  "eslint.probe":[
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+  ]
+}

@@ -1,7 +1,7 @@
-let tokenKey = 'token';
+const tokenKey = 'token'
 
 export function setToken(token) {
-  return sessionStorage.setItem(tokenKey, token);
+  return sessionStorage.setItem(tokenKey, token)
 }
 export function getToken() {
   return sessionStorage.getItem(tokenKey)
