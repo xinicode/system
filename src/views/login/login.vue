@@ -11,15 +11,14 @@
         <el-button type="primary" @click="submitForm('ruleForm')">
           立即创建
         </el-button>
-        <el-button @click="resetForm('ruleForm')">
-          重置
-        </el-button>  
+        <el-button @click="resetForm('ruleForm')"> 重置 </el-button>
       </el-form-item>
-    </el-form>  
+    </el-form>
   </div>
 </template>
 
 <script>
+import { setToken } from "@/utils/setToken";
 import API from "@/api/api";
 export default {
   components: {},
@@ -44,22 +43,15 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          const query = {
-            account: this.form.name,
-            password: this.form.password,
-          };
-          API.getLogin(query).then((rs) => {
-            console.log(rs);
-          });
-          // sessionStorage.setItem('token',token);
-          // this.$router.push("/console");
-        } else {
-          console.log("error submit!!");
-          return false;
+          setToken("aaaaaa");
+          this.$router.push('/loan-input')
         }
       });
     },
     resetForm(formName) {
+      this.$router.push('/')
+
+
       this.$refs[formName].resetFields();
     },
   },

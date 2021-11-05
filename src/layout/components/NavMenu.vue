@@ -20,7 +20,7 @@
 
         <el-menu-item index="/input-manager">
           <i class="el-icon-setting" />
-          <span slot="title">贷款申请 </span>
+          <span slot="title">申请管理 </span>
         </el-menu-item>
 
         <el-submenu index="3">

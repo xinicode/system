@@ -153,7 +153,7 @@ module.exports = {
     // }],
     // 'no-unreachable': 2,
     // 'no-unsafe-finally': 2,
-    'no-unused-vars':  0,
+    'no-unused-vars': 0,
     // 'no-useless-call': 2,
     // 'no-useless-computed-key': 2,
     // 'no-useless-constructor': 2,
@@ -202,5 +202,8 @@ module.exports = {
     //   objectsInObjects: false
     // }],
     // 'array-bracket-spacing': [2, 'never']
+  },
+  globals: {
+    "_": true
   }
 }

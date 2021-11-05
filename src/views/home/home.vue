@@ -72,15 +72,7 @@ export default {
   },
   methods: {
     btnHandel() {
-      console.log("a");
-      const urlObject = window.URL;
-      console.log(urlObject);
-      const t = new Blob([]);
-      console.log(t);
-      const saveLink = document.createElement("a");
-      console.log(saveLink);
-      saveLink.download = "aaaaa";
-      saveLink.click();
+      this.$router.push('input-manager')
     },
   },
 };

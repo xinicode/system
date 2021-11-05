@@ -22,18 +22,12 @@
         <el-dropdown-item command="ad">
           退出
         </el-dropdown-item>
-        <el-dropdown-item command="a">
-          黄金糕
-        </el-dropdown-item>
-        <el-dropdown-item command="b">
-          狮子头
-        </el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </div>
 </template>
 <script>
-import { removeToken } from '@/utils/setToken'
+import { removeToken,getToken } from '@/utils/setToken'
 export default {
   data() {
     return {
@@ -52,9 +46,9 @@ export default {
   },
   methods: {
     handleCommand(val) {
-      console.log(val)
       this.$router.push('/login')
-      removeToken()
+      removeToken();
+      console.log(getToken())
     }
   }
 }
